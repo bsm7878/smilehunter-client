@@ -1,0 +1,43 @@
+.box{
+    width: 1170px;
+    height: 482px;
+    margin: 0 auto;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.03), 0 1px 2px 0 rgba(0,0,0,.19);
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: white;;
+
+    .box_header{
+        .maker_img{
+            border-radius: 50px;
+            margin-right: 10px;
+            float: left;
+        }
+        .maker_content{
+            float: left;
+            padding-top: 4px;
+        
+            .maker_name{
+                font-size: 16px;
+                font-weight: bold;
+                display: block;
+            }
+            .maker_channel{
+                font-size: 13px;
+                font-weight: 500;
+                display: block;
+                color: #00C73C;
+                padding-top: 4px;
+            }
+        }
+    }
+    .box_video{
+        width: 635px;
+        height: 360px;
+        margin-top: 15px;
+    }
+}
+
+.box:not(:last-child){
+    margin-bottom: 25px;
+}
