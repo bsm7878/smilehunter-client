@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './main.scss';
 import { TiInputChecked }  from "react-icons/ti";
-import Button from '../button/Button';
+import Button from '../button_radius/Button';
 import mobile_img from './images/mobile_img.png';
 
 class Main extends Component {

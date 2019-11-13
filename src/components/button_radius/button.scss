@@ -4,14 +4,13 @@
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #fc6a42;
+    background-color: rgb(252, 106, 66);
     font-weight: bold;
     text-align: center;
     font-size: 18px;
     box-sizing: border-box;
     padding-top: 14px;
     &:hover{
-        color: #fc6a42;
-        background-color: #eee;
+        background-color: rgba(252, 106, 66, 0.9);
     }
 }
