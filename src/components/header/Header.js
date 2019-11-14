@@ -1,39 +1,39 @@
 import React, { Component } from 'react';
 import logo_before from './images/logo_before.png';
-// import logo_after from './images/logo_after.png';
+import logo_after from './images/logo_after.png';
 import './header.scss'
+import Category from '../category/Category';
+import {Link} from 'react-router-dom';
 
 class Header extends Component {
     state = {
         height: 0
     }
-    myRef = React.createRef()
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.checkHeight);
+    }
 
     checkHeight = () => {
         this.setState({
             height: window.pageYOffset
-        });
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.onScroll);
-    }
-
-    onScroll = () => {
-        // const scrollTop = this.myRef.current.scrollTop
-        this.setState({
-            // height: this.state.height + 10
-            height: window.pageYOffset
         })
-      }
+    }
 
 
     render() {
+        const {height} = this.state;
+        const {checkHeight} = this;
         return (
-            <div ref={this.myRef} className = "nav nav_scroll" onScroll = {this.onScroll}  >
+            <div className = {height > 0 ? 'nav nav_scroll' : `nav`} onScroll = {checkHeight} >
                 <div className ="nav_inner">
-                    <img src = {logo_before} className = "logo_before" alt = "웃음사냥꾼" />
-                    {this.state.height}
+                    {height > 0 ?
+                        <Link to = "/"><img src = {logo_after} className = "logo" alt = "웃음사냥꾼" /></Link>
+                        :
+                        <Link to = "/"><img src = {logo_before} className = "logo" alt = "웃음사냥꾼" /></Link>
+                    }
+
+                    <Category fontColor = {height > 0 ? '#797979' : `white`}  />
                 </div>
             </div>
         );

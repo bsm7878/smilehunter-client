@@ -3,10 +3,12 @@ import './main.scss';
 import { TiInputChecked }  from "react-icons/ti";
 import Button from '../button_radius/Button';
 import mobile_img from './images/mobile_img.png';
+import ContentList from '../content/ContentList';
 
 class Main extends Component {
     render() {
         return (
+            <>
             <div className = "main">
                 <div className = "main_inner">
                     <div className = "main_inner_left">
@@ -26,6 +28,9 @@ class Main extends Component {
                     </div>
                 </div>
             </div>
+            
+             <ContentList />
+            </>
         );
     }
 }

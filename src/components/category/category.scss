@@ -1,0 +1,16 @@
+.category{
+    ul{
+        float: right;
+        li{
+            float: left;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 25px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
