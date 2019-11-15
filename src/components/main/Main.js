@@ -3,12 +3,10 @@ import './main.scss';
 import { TiInputChecked }  from "react-icons/ti";
 import Button from '../button_radius/Button';
 import mobile_img from './images/mobile_img.png';
-import ContentList from '../content/ContentList';
 
 class Main extends Component {
     render() {
         return (
-            <>
             <div className = "main">
                 <div className = "main_inner">
                     <div className = "main_inner_left">
@@ -20,7 +18,6 @@ class Main extends Component {
                             <li><TiInputChecked className ="check" /> 지하철, 버스, 독서실에서 심심할 때</li>
                             <li><TiInputChecked className ="check" /> 저작권 걱정 없이 고화질로 보고 싶을 때</li>
                         </ul>
-
                         <Button/>
                     </div>
                     <div className = "main_inner_right">
@@ -28,9 +25,6 @@ class Main extends Component {
                     </div>
                 </div>
             </div>
-            
-             <ContentList />
-            </>
         );
     }
 }

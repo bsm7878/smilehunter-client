@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
-import Intro from './components/intro/Intro';
-import Tv from './components/tv/Tv';
+import TvPage from './pages/TvPage';
+import IntroPage from './pages/IntroPage';
+import IndexPage from './pages/IndexPage';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <Route exact path = "/" component = {Main} />
-        <Route path = "/intro" component = {Intro} />
-        <Route path = "/tv" component = {Tv} />
+        <Route exact={true} path = "/" component = {IndexPage} />
+        <Route path = "/intro" component = {IntroPage}/>
+        <Route path = "/tv" component = {TvPage}/>
         <Footer />
       </div>
     );
